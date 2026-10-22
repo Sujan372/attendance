@@ -1,0 +1,1060 @@
+/* ========================================
+   ADMIN CALENDAR
+======================================== */
+
+.admin-calendar-layout {
+    min-height: 100vh;
+    display: flex;
+    background: #f5f7fb;
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.admin-calendar-sidebar {
+    width: 255px;
+    min-height: 100vh;
+    background: #111827;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.admin-calendar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 24px 20px;
+}
+
+.admin-calendar-logo {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.admin-calendar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.admin-calendar-brand h2 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.admin-calendar-brand span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.admin-calendar-nav {
+    padding: 8px 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.admin-calendar-nav-item {
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    color: #d1d5db;
+
+    transition: 0.2s ease;
+}
+
+.admin-calendar-nav-item:hover,
+.admin-calendar-nav-item.active {
+    background: #1f2937;
+    color: #ffffff;
+}
+
+.admin-calendar-nav-item span {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+/* ========================================
+   SIDEBAR BOTTOM
+======================================== */
+
+.admin-calendar-sidebar-bottom {
+    margin-top: auto;
+
+    padding: 20px;
+
+    border-top: 1px solid #253047;
+}
+
+.admin-calendar-role span {
+    display: block;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+.admin-calendar-role strong {
+    font-size: 13px;
+}
+
+.admin-calendar-logout {
+    width: 100%;
+
+    margin-top: 14px;
+
+    border: 0;
+    border-radius: 8px;
+
+    padding: 11px;
+
+    background: #1f2937;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.admin-calendar-logout:hover {
+    background: #273449;
+}
+
+/* ========================================
+   MAIN
+======================================== */
+
+.admin-calendar-main {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ========================================
+   TOPBAR
+======================================== */
+
+.admin-calendar-topbar {
+    min-height: 82px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 34px;
+}
+
+.admin-calendar-topbar p {
+    margin: 0 0 4px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.12em;
+
+    color: #64748b;
+}
+
+.admin-calendar-topbar h1 {
+    margin: 0;
+
+    font-size: 28px;
+
+    color: #111827;
+}
+
+.admin-calendar-add-btn {
+    border: 0;
+    border-radius: 8px;
+
+    padding: 11px 18px;
+
+    background: #182337;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.admin-calendar-add-btn:hover {
+    opacity: 0.92;
+}
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.admin-calendar-content {
+    padding: 28px 34px 36px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        330px;
+
+    gap: 22px;
+}
+
+/* ========================================
+   MAIN CALENDAR CARD
+======================================== */
+
+.admin-calendar-card,
+.admin-upcoming-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(15, 23, 42, 0.04);
+}
+
+.admin-calendar-card {
+    padding: 24px;
+}
+
+/* ========================================
+   CALENDAR HEADER
+======================================== */
+
+.admin-calendar-header,
+.admin-upcoming-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.admin-calendar-header span,
+.admin-upcoming-header span,
+.admin-calendar-modal-header span {
+    font-size: 11px;
+
+    letter-spacing: 0.1em;
+
+    color: #64748b;
+}
+
+.admin-calendar-header h2,
+.admin-upcoming-header h2 {
+    margin: 5px 0 0;
+
+    font-size: 22px;
+
+    color: #111827;
+}
+
+/* ========================================
+   MONTH CONTROLS
+======================================== */
+
+.admin-calendar-controls {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.admin-calendar-controls button {
+    border: 1px solid #dbe1ea;
+
+    background: #ffffff;
+    color: #182337;
+
+    width: 38px;
+    height: 36px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.2s ease;
+}
+
+.admin-calendar-controls button:hover {
+    background: #f7f9fc;
+}
+
+.admin-calendar-controls .today-btn {
+    width: auto;
+
+    padding: 0 12px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+/* ========================================
+   WEEKDAYS
+======================================== */
+
+.calendar-weekdays {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    border-top: 1px solid #edf0f4;
+    border-left: 1px solid #edf0f4;
+}
+
+.calendar-weekdays div {
+    padding: 10px 8px;
+
+    border-right:
+        1px solid #edf0f4;
+
+    border-bottom:
+        1px solid #edf0f4;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+
+    color: #64748b;
+
+    font-weight: 700;
+
+    background: #fafbfc;
+}
+
+/* ========================================
+   CALENDAR GRID
+======================================== */
+
+.calendar-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    border-left: 1px solid #edf0f4;
+}
+
+.calendar-day {
+    min-height: 126px;
+
+    padding: 8px;
+
+    border-right:
+        1px solid #edf0f4;
+
+    border-bottom:
+        1px solid #edf0f4;
+
+    background: #ffffff;
+}
+
+.calendar-day.empty {
+    background: #fafbfc;
+}
+
+/* ========================================
+   DATE NUMBER
+======================================== */
+
+.calendar-day-number {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.calendar-day-number.today {
+    background: #182337;
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+/* ========================================
+   CALENDAR EVENTS
+======================================== */
+
+.calendar-events {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.calendar-event {
+    width: 100%;
+
+    border: 0;
+    border-radius: 5px;
+
+    padding: 5px 6px;
+
+    text-align: left;
+
+    font-size: 10px;
+
+    line-height: 1.25;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+    background: #eef2ff;
+
+    color: #27324d;
+}
+
+/* Event Types */
+
+.calendar-event.holiday {
+    background: #eef6f0;
+}
+
+.calendar-event.exam {
+    background: #fff4e8;
+}
+
+.calendar-event.meeting {
+    background: #f2edf9;
+}
+
+.calendar-event.school-event {
+    background: #eaf3fb;
+}
+
+.calendar-event.extra-class {
+    background: #f8f1df;
+}
+
+.calendar-event.activity {
+    background: #edf5f3;
+}
+
+.calendar-event.general {
+    background: #f1f3f5;
+}
+
+.more-events {
+    font-size: 10px;
+
+    color: #64748b;
+
+    padding-left: 3px;
+}
+
+/* ========================================
+   UPCOMING EVENTS
+======================================== */
+
+.admin-upcoming-card {
+    padding: 22px;
+
+    align-self: start;
+}
+
+.admin-upcoming-header {
+    margin-bottom: 16px;
+}
+
+.event-count {
+    min-width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f5f9;
+
+    color: #182337 !important;
+
+    font-size: 11px !important;
+
+    letter-spacing: normal !important;
+
+    font-weight: 700;
+}
+
+.upcoming-event-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.upcoming-event {
+    width: 100%;
+
+    border: 1px solid #edf0f4;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    padding: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    display: grid;
+
+    grid-template-columns:
+        88px
+        1fr;
+
+    gap: 12px;
+
+    transition: 0.2s ease;
+}
+
+.upcoming-event:hover {
+    background: #fafbfc;
+}
+
+.upcoming-date {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.upcoming-date strong {
+    font-size: 11px;
+
+    color: #182337;
+}
+
+.upcoming-date span {
+    font-size: 10px;
+
+    color: #64748b;
+}
+
+.upcoming-details {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.upcoming-details strong {
+    font-size: 12px;
+
+    color: #111827;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.upcoming-details span {
+    font-size: 10px;
+
+    color: #64748b;
+}
+
+.upcoming-details small {
+    font-size: 10px;
+
+    color: #64748b;
+}
+
+/* ========================================
+   SUCCESS / ERROR
+======================================== */
+
+.admin-calendar-success,
+.admin-calendar-error {
+    margin: 18px 34px 0;
+
+    border-radius: 8px;
+
+    padding: 11px 14px;
+
+    font-size: 13px;
+}
+
+.admin-calendar-success {
+    background: #eef8f1;
+
+    border: 1px solid #cce8d3;
+
+    color: #246b38;
+}
+
+.admin-calendar-error {
+    background: #fff3f2;
+
+    border: 1px solid #f1d0cc;
+
+    color: #a33930;
+}
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.admin-calendar-empty {
+    padding: 24px 10px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+/* ========================================
+   MODAL
+======================================== */
+
+.admin-calendar-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(15, 23, 42, 0.48);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    z-index: 1000;
+}
+
+.admin-calendar-modal {
+    width: min(720px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 70px
+        rgba(15, 23, 42, 0.2);
+}
+
+/* ========================================
+   MODAL HEADER
+======================================== */
+
+.admin-calendar-modal-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    padding: 22px 24px 16px;
+
+    border-bottom:
+        1px solid #edf0f4;
+}
+
+.admin-calendar-modal-header h2 {
+    margin: 6px 0 0;
+
+    font-size: 21px;
+
+    color: #111827;
+}
+
+.modal-close {
+    border: 0;
+
+    background: transparent;
+
+    color: #64748b;
+
+    font-size: 26px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #182337;
+}
+
+/* ========================================
+   FORM
+======================================== */
+
+.admin-calendar-form {
+    padding: 22px 24px 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.calendar-form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.calendar-form-group.full {
+    grid-column: 1 / -1;
+}
+
+.calendar-form-group label {
+    font-size: 12px;
+
+    color: #334155;
+
+    font-weight: 700;
+}
+
+.calendar-form-group input,
+.calendar-form-group select,
+.calendar-form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid #d7dee8;
+
+    border-radius: 8px;
+
+    padding: 11px 12px;
+
+    background: #ffffff;
+
+    color: #182337;
+
+    font-size: 13px;
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+.calendar-form-group textarea {
+    resize: vertical;
+}
+
+.calendar-form-group input::placeholder,
+.calendar-form-group textarea::placeholder {
+    color: #9aa6b6;
+}
+
+.calendar-form-group input:focus,
+.calendar-form-group select:focus,
+.calendar-form-group textarea:focus {
+    border-color: #8b97aa;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(24, 35, 55, 0.05);
+}
+
+/* ========================================
+   MODAL ERROR
+======================================== */
+
+.calendar-modal-error {
+    grid-column: 1 / -1;
+
+    background: #fff3f2;
+
+    border: 1px solid #f1d0cc;
+
+    color: #a33930;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+
+/* ========================================
+   FORM FOOTER
+======================================== */
+
+.calendar-form-footer {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 8px;
+}
+
+.calendar-form-actions {
+    display: flex;
+
+    gap: 9px;
+
+    margin-left: auto;
+}
+
+.calendar-delete-btn,
+.calendar-cancel-btn,
+.calendar-save-btn {
+    border-radius: 8px;
+
+    padding: 10px 16px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.calendar-delete-btn {
+    border:
+        1px solid #efd0cb;
+
+    background: #fff7f6;
+
+    color: #b33a30;
+}
+
+.calendar-cancel-btn {
+    border:
+        1px solid #dbe1ea;
+
+    background: #ffffff;
+
+    color: #334155;
+}
+
+.calendar-save-btn {
+    border: 0;
+
+    background: #182337;
+
+    color: #ffffff;
+}
+
+/* ========================================
+   LOADING
+======================================== */
+
+.admin-calendar-loading {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    color: #475569;
+
+    background: #f5f7fb;
+}
+
+.admin-calendar-loader {
+    width: 30px;
+    height: 30px;
+
+    border:
+        3px solid #dbe1ea;
+
+    border-top-color: #182337;
+
+    border-radius: 50%;
+
+    animation:
+        adminCalendarSpin
+        0.8s linear infinite;
+}
+
+@keyframes adminCalendarSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+    .admin-calendar-content {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-upcoming-card {
+        width: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .admin-calendar-sidebar {
+        width: 220px;
+    }
+
+    .admin-calendar-content {
+        padding: 20px;
+    }
+
+    .admin-calendar-topbar {
+        padding: 16px 20px;
+    }
+
+    .calendar-day {
+        min-height: 104px;
+    }
+}
+
+@media (max-width: 700px) {
+    .admin-calendar-sidebar {
+        display: none;
+    }
+
+    .admin-calendar-form {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-form-group.full,
+    .calendar-form-footer,
+    .calendar-modal-error {
+        grid-column: auto;
+    }
+
+    .calendar-form-footer {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+    .calendar-form-actions {
+        margin-left: 0;
+
+        justify-content: flex-end;
+    }
+
+    .admin-calendar-card {
+        padding: 15px;
+
+        overflow-x: auto;
+    }
+
+    .calendar-grid,
+    .calendar-weekdays {
+        min-width: 620px;
+    }
+
+    .admin-calendar-topbar h1 {
+        font-size: 22px;
+    }
+
+    .admin-calendar-add-btn {
+        padding: 10px 12px;
+    }
+}

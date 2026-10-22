@@ -1,0 +1,195 @@
+.academic-page {
+    min-height: 100vh;
+    padding: 35px;
+    background: #f5f7fb;
+    box-sizing: border-box;
+}
+
+.academic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.academic-header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #1f2937;
+}
+
+.academic-header p {
+    margin-top: 8px;
+    color: #6b7280;
+}
+
+.back-btn {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    background: #1f2937;
+    color: white;
+    cursor: pointer;
+}
+
+.student-info-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.student-info-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.student-info-card span,
+.summary-card span,
+.mark-grade span {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.student-info-card strong {
+    color: #1f2937;
+}
+
+.academic-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.summary-card strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 24px;
+    color: #111827;
+}
+
+.marks-section {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #1f2937;
+}
+
+.section-heading p {
+    color: #6b7280;
+    margin-top: 6px;
+}
+
+.marks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.mark-card {
+    display: grid;
+    grid-template-columns: 1fr 180px 100px;
+    align-items: center;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.mark-subject h3 {
+    margin: 0 0 5px;
+    color: #1f2937;
+}
+
+.mark-subject span {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.mark-score {
+    text-align: center;
+}
+
+.mark-score strong {
+    font-size: 24px;
+    color: #111827;
+}
+
+.mark-score span {
+    color: #6b7280;
+}
+
+.mark-grade {
+    text-align: center;
+}
+
+.mark-grade strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.no-marks,
+.academic-loading,
+.academic-error {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.no-marks p {
+    color: #6b7280;
+}
+
+.academic-error {
+    color: #dc2626;
+}
+
+@media (max-width: 800px) {
+
+    .academic-page {
+        padding: 20px;
+    }
+
+    .academic-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .student-info-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .academic-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .mark-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mark-score,
+    .mark-grade {
+        text-align: left;
+    }
+}

@@ -1,0 +1,672 @@
+* {
+    box-sizing: border-box;
+}
+
+.student-notices-layout {
+    min-height: 100vh;
+    display: flex;
+
+    background: #f5f7fb;
+    color: #182033;
+
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.student-notices-sidebar {
+    width: 245px;
+    height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    background: #101827;
+    color: white;
+
+    padding: 24px 17px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 20;
+}
+
+.student-notices-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 5px 9px 32px;
+}
+
+.student-notices-logo {
+    width: 48px;
+    height: 48px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    padding: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.student-notices-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+.student-notices-brand h2 {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+.student-notices-brand span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #8f9aac;
+
+    font-size: 10px;
+}
+
+/* ========================================
+   NAV
+======================================== */
+
+.student-notices-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.student-notices-nav-item {
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 14px;
+
+    border-radius: 10px;
+
+    color: #aab4c4;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.student-notices-nav-item span {
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+.student-notices-nav-item:hover {
+    background: #1b2535;
+    color: white;
+}
+
+.student-notices-nav-item.active {
+    background: #273449;
+    color: white;
+}
+
+/* ========================================
+   SIDEBAR BOTTOM
+======================================== */
+
+.student-notices-sidebar-bottom {
+    margin-top: auto;
+}
+
+.student-notices-student {
+    border-top: 1px solid #293344;
+
+    padding: 19px 12px;
+}
+
+.student-notices-student span {
+    display: block;
+
+    color: #7f8b9e;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.student-notices-student strong {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 12px;
+}
+
+.student-notices-logout {
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #a8b1bf;
+
+    border-radius: 9px;
+
+    padding: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.student-notices-logout:hover {
+    background: #1b2535;
+
+    color: white;
+}
+
+/* ========================================
+   MAIN
+======================================== */
+
+.student-notices-main {
+    width: calc(100% - 245px);
+
+    margin-left: 245px;
+}
+
+/* ========================================
+   TOPBAR
+======================================== */
+
+.student-notices-topbar {
+    height: 78px;
+
+    padding: 0 35px;
+
+    background: white;
+
+    border-bottom: 1px solid #e7eaf0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.student-notices-topbar p {
+    margin: 0 0 3px;
+
+    color: #9aa3b3;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.student-notices-topbar h2 {
+    margin: 0;
+
+    color: #182337;
+
+    font-size: 20px;
+}
+
+.student-notices-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.student-notices-profile-text {
+    text-align: right;
+}
+
+.student-notices-profile-text strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+.student-notices-profile-text span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #929aaa;
+
+    font-size: 11px;
+}
+
+.student-notices-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #f0e5c0;
+
+    color: #6c5310;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.student-notices-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 32px 35px;
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.student-notices-heading {
+    margin-bottom: 25px;
+}
+
+.student-notices-heading > span {
+    color: #9aa3b1;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.student-notices-heading h1 {
+    margin: 7px 0 6px;
+
+    color: #182337;
+
+    font-size: 27px;
+}
+
+.student-notices-heading p {
+    margin: 0;
+
+    color: #8992a2;
+
+    font-size: 12px;
+}
+
+/* ========================================
+   NOTICE LIST
+======================================== */
+
+.student-notices-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.student-notice-card {
+    background: white;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 15px;
+
+    padding: 20px 22px;
+
+    box-shadow:
+        0 4px 15px rgba(20, 30, 45, 0.03);
+}
+
+.student-notice-card.urgent {
+    border-left: 4px solid #b34e4e;
+}
+
+.student-notice-card.important {
+    border-left: 4px solid #b28a39;
+}
+
+.student-notice-card.normal {
+    border-left: 4px solid #687b9d;
+}
+
+/* ========================================
+   CARD HEADER
+======================================== */
+
+.student-notice-card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+}
+
+.student-notice-badges {
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 9px;
+}
+
+.student-notice-type,
+.student-notice-priority {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+.student-notice-type {
+    background: #eef2ff;
+
+    color: #3730a3;
+}
+
+.student-notice-priority.normal {
+    background: #f4f5f7;
+
+    color: #687282;
+}
+
+.student-notice-priority.important {
+    background: #fff7e8;
+
+    color: #8a6113;
+}
+
+.student-notice-priority.urgent {
+    background: #fff0f0;
+
+    color: #a34646;
+}
+
+.student-notice-card h2 {
+    margin: 0;
+
+    color: #182337;
+
+    font-size: 18px;
+}
+
+/* ========================================
+   MESSAGE
+======================================== */
+
+.student-notice-message {
+    margin: 14px 0 17px;
+
+    color: #566173;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+
+    white-space: pre-wrap;
+}
+
+/* ========================================
+   META
+======================================== */
+
+.student-notice-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #edf0f3;
+
+    color: #8992a2;
+
+    font-size: 9px;
+}
+
+.student-notice-meta strong {
+    color: #667181;
+}
+
+/* ========================================
+   EMPTY
+======================================== */
+
+.student-notices-empty {
+    background: white;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 15px;
+
+    padding: 75px 20px;
+
+    text-align: center;
+}
+
+.student-notices-empty-icon {
+    margin-bottom: 10px;
+
+    color: #9da5b2;
+
+    font-size: 30px;
+}
+
+.student-notices-empty h3 {
+    margin: 0;
+
+    color: #465163;
+
+    font-size: 14px;
+}
+
+.student-notices-empty p {
+    margin: 7px 0 0;
+
+    color: #939baa;
+
+    font-size: 10px;
+}
+
+/* ========================================
+   LOADING / ERROR
+======================================== */
+
+.student-notices-loading,
+.student-notices-error {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.student-notices-loading p {
+    color: #8992a2;
+
+    font-size: 11px;
+}
+
+.student-notices-loader {
+    width: 35px;
+    height: 35px;
+
+    border: 3px solid #e2e5e9;
+
+    border-top-color: #182337;
+
+    border-radius: 50%;
+
+    animation: studentNoticeSpin 0.8s linear infinite;
+}
+
+@keyframes studentNoticeSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.student-notices-error h2 {
+    color: #884b4b;
+
+    font-size: 15px;
+}
+
+.student-notices-error button {
+    border: 0;
+
+    background: #182337;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 10px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 720px) {
+
+    .student-notices-sidebar {
+        width: 65px;
+
+        padding: 20px 10px;
+    }
+
+    .student-notices-brand {
+        justify-content: center;
+    }
+
+    .student-notices-brand > div:last-child {
+        display: none;
+    }
+
+    .student-notices-nav-item {
+        justify-content: center;
+
+        padding: 0;
+
+        font-size: 0;
+    }
+
+    .student-notices-nav-item span {
+        font-size: 16px;
+    }
+
+    .student-notices-student {
+        display: none;
+    }
+
+    .student-notices-logout {
+        text-align: center;
+
+        font-size: 0;
+    }
+
+    .student-notices-main {
+        margin-left: 65px;
+
+        width: calc(100% - 65px);
+    }
+
+    .student-notices-topbar {
+        padding: 0 20px;
+    }
+
+    .student-notices-profile-text {
+        display: none;
+    }
+
+    .student-notices-content {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .student-notices-content {
+        padding: 20px 14px;
+    }
+
+    .student-notices-heading h1 {
+        font-size: 23px;
+    }
+
+    .student-notice-card {
+        padding: 18px;
+    }
+}
